@@ -44,6 +44,26 @@ public class ProjectDemo {
         javaCourse.dropStudent(student2);
         javaCourse.displayCourseInfo();
         
+        // Grade Calculator Demo
+        System.out.println("\n=== Grade Calculator Demo ===");
+        
+        GradeCalculator calculator = new GradeCalculator();
+        
+        // Add courses and grades
+        calculator.addCourse("Java Programming", 3.8, 3);
+        calculator.addCourse("Database Systems", 3.6, 4);
+        calculator.addCourse("Web Development", 3.9, 3);
+        calculator.addCourse("Data Structures", 3.7, 4);
+        
+        // Display transcript
+        calculator.displayTranscript();
+        
+        // Check academic standing
+        System.out.println("\nAcademic Standing:");
+        double gpa = calculator.calculateGPA();
+        System.out.println("Letter Grade: " + calculator.getLetterGrade(gpa));
+        System.out.println("Dean's List Eligible: " + calculator.isEligibleForDeansList());
+        
         System.out.println("\n=== Demo Complete ===");
     }
 }
